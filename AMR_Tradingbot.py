@@ -14,7 +14,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-# --- 2. LOGIC FUNCTIONS (Core Python) ---
+# --- 2. LOGIC FUNCTIONS (Python) ---
 def get_market_price(last_price):
     """Simulates market volatility."""
     change_pct = random.uniform(-0.03, 0.03)  # Max 3% change
@@ -64,7 +64,7 @@ if st.sidebar.button("Launch System"):
 
         # Step B: Algorithmic Logic
         if len(st.session_state.data) >= ma_window:
-            # Calculate Moving Average (Pure Python list slicing and sum)
+            # Calculate Moving Average (Python list slicing and sum)
             moving_avg = sum(st.session_state.data[-ma_window:]) / ma_window
 
             # Trading Decisions
@@ -109,6 +109,4 @@ if st.sidebar.button("Launch System"):
 st.sidebar.info("Click 'Launch' to begin over calculation of the trading suppliers")
 
 if __name__ == "__main__":
-    pass  # Streamlit handles the execution loops
-
-# streamlit run algo_trade.py
+    pass  
